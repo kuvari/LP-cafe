@@ -1,0 +1,75 @@
+@use "global" as *;
+
+.p-mv{
+    width: 100%;
+    height: 100vh;
+}
+
+.p-mv__img{
+    height: inherit;
+    background-color: rgba(231,76,60,0.3);
+    animation: bg-color 20s infinite;
+}
+@keyframes bg-color {
+    0% { background-color: rgba(52,152,219,0.3); }
+    20% { background-color: rgba(194,136,231,0.3); }
+    40% { background-color: rgba(155,89,182,0.3); }
+    60% { background-color: rgba(52,152,219,0.3); }
+    80% { background-color: rgba(155,89,182,0.3); }
+    100% { background-color: rgba(52,152,219,0.3); }
+}
+
+.p-mv__img::before{
+    content: "";
+    display: block;
+    padding-top: calc((5702/
+    3801)*100%);
+}
+.p-mv__img img{
+    position: absolute;
+    left: 0;
+    top: 0;
+    object-fit: cover;
+    object-position: 75% 0;
+    z-index: -1;
+    @include mq(md){
+        object-position: center 0%;
+    }
+}
+
+.p-mv-body{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+}
+
+.p-mv-body__title span{
+    font-family: $second-font-family;
+    font-weight: $bold;
+    font-style: italic;
+    color: $white;
+    font-size: rem(25);
+    @include mq(md){
+        font-size: rem(40);
+    }
+}
+
+.p-mv-body__subtitle{
+    margin-top: rem(15);
+    @include mq(md){
+        margin-top: rem(20);
+    }
+}
+.p-mv-body__subtitle span{
+    font-family: $second-font-family;
+    font-weight: $bold;
+    font-style: italic;
+    color: $white;
+    font-size: rem(15);
+    @include mq(md){
+        font-size: rem(18);
+    }
+}

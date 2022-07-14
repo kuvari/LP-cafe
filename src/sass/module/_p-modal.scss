@@ -1,0 +1,64 @@
+@use "global" as *;
+
+.p-modal{
+    position: fixed;
+    display: none;
+    width: rem(300);
+    height: rem(200);
+    top: rem(320);
+    left: 50%;
+    transform:translate(-50%,0);
+    z-index: 501;
+    text-align: center;
+    @include mq(md){
+        width: rem(500);
+        height: rem(200);
+    }
+}
+
+.p-modal__button{
+    display: block;
+    cursor: pointer;
+    box-shadow: 0 0 3px 0 rgba(0,0,0,.12), 0 2px 3px 0 rgba(0,0,0,.22);
+    transition: .3s;
+}
+
+.p-modal__button:hover{
+    box-shadow: 0 15px 30px -5px rgba(0,0,0,.15), 0 0 5px rgba(0,0,0,.1);
+	transform: translateY(-4px);
+}
+
+.p-modal__bg{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background: transparent;
+    z-index: 500;
+    display: none;
+    background-color: rgba(0,0,0,0.8);
+}
+
+.p-modal__wrap{
+    border: 4px solid $main;
+    background: #fff;
+    padding: rem(20);
+    max-height: 100px;
+    overflow: scroll;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.p-modal__box{
+    background: $sub;
+    border-radius: rem(16);
+    padding: rem(10);
+}
+
+.p-modal__text{
+    font-weight: $regular;
+    color: $black;
+    font-size: rem(20);
+}

@@ -1,0 +1,91 @@
+@use "global" as *;
+
+.p-footer__text{
+    text-align: center;
+    letter-spacing: rem(1.5);
+    margin-top: rem(20);
+    padding: 0 rem(15);
+    @include mq(md){
+        margin-top: initial;
+        padding: initial;
+    }
+}
+
+.p-footer-copyright__inner{
+    text-align: center;
+    text-transform: capitalize;
+    margin-top: rem(50);
+    @include mq(md){
+        margin-top: rem(100);
+    }
+}
+
+.p-footer-copyright__inner::after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: rem(10);
+    background: repeating-linear-gradient(-45deg,#111,#111 rem(3),#fff rem(3),#fff rem(10));
+    margin-top: rem(50);
+    @include mq(md){
+        margin-top: rem(100);
+    }
+}
+
+.p-footer-sns__inner{
+    margin-top: rem(50);
+    @include mq(md){
+        margin-top: rem(70);
+    }
+}
+
+/* ボタン全体 */
+.p-footer-sns__icon{
+    border-radius:50%;
+    position:relative;
+    display:inline-block;
+    width:50px;
+    height:50px;
+    font-size:30px;
+    text-decoration:none;
+    transition:0.5s;
+    background-color:$main;
+    color:#fff;
+}
+/* アイコンを真ん中に */
+.p-footer-sns__icon i{
+    position:absolute;
+    top:50%;
+    left:50%;
+    -ms-transform:translate(-50%,-50%);
+    -webkit-transform:translate(-50%,-50%);
+    transform:translate(-50%,-50%);
+}
+/* Twitterマウスホバー時 */
+.p-footer-sns__icon.fl_tw2:hover{
+    background:linear-gradient(135deg, #13f1fc 0%,#0470dc 100%);
+    transition: 0.3s;
+}
+/* Instagramマウスホバー時 */
+.p-footer-sns__icon.insta_btn2:hover{
+    background:-webkit-linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;
+    background:linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;		
+    transition: 0.3s;
+}
+/* Facebookマウスホバー時 */
+.p-footer-sns__icon.fl_fb2:hover{
+    background:-webkit-linear-gradient(top, #5c80c6 0%, #34528c 74%);	
+    background:linear-gradient(to bottom, #5c80c6 0%, #34528c 74%);
+    transition: 0.3s;
+}
+/* お問い合わせマウスホバー時 */
+.p-footer-sns__icon.fl_ma2:hover{
+    background:linear-gradient(135deg, #fad961 0%,#f76b1c 100%);
+    transition: 0.3s;
+}
+/* ボタン全体の位置 */
+.p-footer-sns{
+    display:flex;
+    gap: rem(20);
+    justify-content: center;
+}

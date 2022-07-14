@@ -1,0 +1,64 @@
+@use "global" as *;
+
+.p-news-header{
+    width: 100%;
+}
+
+.p-news-header__title{
+    text-align: center;
+}
+
+.p-news-block{
+    margin-top: rem(80);
+    @include mq(md){
+        padding: 0 rem(170);
+    }
+}
+
+.p-news-block__inner{
+    width: 100%;
+    height: 100%;
+    border-bottom: 1px solid $black;
+    @include mq(md){
+        padding: rem(10);
+        align-items: center;
+        display: flex;
+    }
+}
+
+.p-news-block__inner:not(:first-child){
+    margin-top: rem(25);
+    @include mq(md){
+        margin-top: initial;
+    }
+}
+
+.p-news-block__time{
+    width: 100%;
+    @include mq(md){
+    width: 17.82608695652174%;
+    text-align: left;
+    }
+}
+
+.p-news-block__time span{
+    height: 100%;
+    font-size: rem(19);
+}
+
+.p-news-block__text{
+    height: 100%;
+    width: 100%;
+    margin-top: rem(15);
+    @include mq(md){
+    width: 82.17391304347826%;
+    margin-top: initial;
+    text-align: left;
+    }
+}
+
+.p-news-block__text span{
+    height: 100%;
+    font-size: rem(16);
+    letter-spacing: rem(1.5);
+}

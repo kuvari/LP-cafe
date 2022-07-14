@@ -1,0 +1,39 @@
+@use "global" as *;
+
+.c-title__inner{
+    @include mq(md){
+        padding: 0 rem(165);
+    }
+}
+
+.c-title span{
+    display: inline-block;
+    font-family: $base-font-family;
+    font-weight: $bold;
+    font-style: italic;
+    color: $black;
+    text-transform: capitalize;
+    letter-spacing: rem(1);
+    line-height: 1.5;
+    font-size: rem(24);
+    padding: rem(18) 0;
+    @include mq(md){
+        font-size: rem(26);
+    }
+}
+
+.c-title::before{
+    content: "";
+    display: block;
+    width: 100%;
+    height: rem(10);
+    background: repeating-linear-gradient(-45deg,#111,#111 rem(3),#fff rem(3),#fff rem(10));
+}
+
+.c-title::after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: rem(10);
+    background: repeating-linear-gradient(-45deg,#111,#111 rem(3),#fff rem(3),#fff rem(10));
+}

@@ -1,0 +1,138 @@
+@use "global" as *;
+
+.p-menu-header{
+    text-align: center;
+    margin-top: rem(50);
+    @include mq(md){
+        margin-top: initial;
+    }
+}
+
+.p-menu-items__inner{
+    margin-top: rem(30);
+    padding: 0 rem(15);
+    @include mq(md){
+        margin-top: rem(50);
+        padding: 0 rem(450);
+    }
+}
+
+.p-menu-items{
+    width:100%;
+    font-size: rem(18);
+}
+
+.p-menu-item{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+.p-menu-item:not(:first-child){
+    margin-top: rem(25);
+}
+
+.p-menu-item::after{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+    width: 100%;
+    border-bottom: dotted 1px #000;
+}
+
+.p-menu-item dt{
+    padding: 0 rem(5) 0 0;
+    background-color: #ffffff;
+    z-index: 2;
+    text-align: left;
+}
+
+.p-menu-item dd{
+    padding: 0 0 0 rem(5);
+    background-color: #ffffff;
+    z-index: 2;
+    text-align: right;
+}
+
+.p-menu-item{
+    position: relative;
+    cursor: pointer;
+}
+
+.p-menu-item::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 25%;
+    display: inline-block;
+    pointer-events: none;
+    z-index: 999;
+    width: rem(250);
+    height: rem(250);
+@include mq(md){
+        left: 75%;
+        width: rem(350);
+        height: rem(350);
+    }
+}
+
+.p-menu-item:nth-child(1):hover::before{
+    border: rem(2) solid $main;
+    border-radius: 50%;
+    background: url(/images/common/coffee1.png); 
+    background-color: $sub;
+    background-size: contain; 
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+
+.p-menu-item:nth-child(2):hover::before{
+    border: rem(2) solid $main;
+    border-radius: 50%;
+    background: url(/images/common/mocha2.png); 
+    background-color: $sub;
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+
+.p-menu-item:nth-child(3):hover::before{
+    border: rem(2) solid $main;
+    border-radius: 50%;
+    background: url(/images/common/Latte3.png); 
+    background-color: $sub;
+    background-size: contain; 
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+
+.p-menu-item:nth-child(4):hover::before{
+    border: rem(2) solid $main;
+    border-radius: 50%;
+    background: url(/images/common/bread4.jpg); 
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+
+.p-menu-item:nth-child(5):hover::before{
+    border: rem(2) solid $main;
+    border-radius: 50%;
+    background: url(/images/common/Focaccia5.jpg); 
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+
+.p-menu-item:nth-child(6):hover::before{
+    border: rem(2) solid $main;
+    border-radius: 50%;
+    background: url(/images/common/sandwich6.png); 
+    background-color: $sub;
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+

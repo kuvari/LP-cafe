@@ -1,0 +1,42 @@
+@use "global" as *;
+
+.arrow{
+    position: fixed;
+    cursor: pointer;
+    background-color: $main;
+    border-radius: 50px;
+    transition: all 0.2s ease-in-out;
+    width: rem(50);
+    height: rem(50);
+    z-index: 999;
+    right: 25px;
+    bottom: 25px;
+    @include mq(md){
+        width: 60px;
+        height: 60px;    
+        right: 60px;
+        bottom: 60px;
+    }
+}
+
+.arrow:hover{
+    background-color: $sub;
+    transition: 0.3s;
+}
+
+.arrow::before{
+    position: absolute;
+    content: "";
+    width: rem(20);
+    height: rem(20);
+    border-top: rem(3) solid $white;
+    border-right: rem(3) solid $white;
+    left: 50%;
+    top: 60%;
+    transform: translate(-50% ,-50%) rotate(-45deg);
+    @include mq(md){
+        width: 20px;
+        height: 20px;
+        }
+}
+
